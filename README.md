@@ -1,4 +1,4 @@
-﻿# W27：[状态管理](https://github.com/OS-Q/W27)
+﻿# W27：[状态管控](https://github.com/OS-Q/W27)
 
 [![sites](OS-Q/OS-Q.png)](http://www.OS-Q.com)
 
@@ -6,35 +6,37 @@
 
 #### 关于系统架构：[OS-Q](https://github.com/OS-Q/OS-Q)
 
-
 ## [平台描述](https://github.com/OS-Q/W27/wiki) 
 
-状态管理平台用于实时长期在线管理系统所有的设备状态，用于引导分配和资源调度
+状态管控平台，用于管理各个边缘设备的状态，汇总所有状态信息，并且可下发各种控制状态指令
 
-### [共用资源](https://github.com/OS-Q/W27/wiki) 
+### [共用资源](OS-Q/)
+
 
 
 ---
 
-- 边缘设备统一命名规则：体系 Q:[1,4] -> 节点 M:[1,12] -> 平台 W:[1,52] -> 设备 D:[1,365]
+- 边缘设备命名规则：体系 Q:[1,4] -> 节点 M:[1,12] -> 平台 W:[1,52] -> 设备 D:[1,365]
+
+- naming patterns：system Q[1,4] -> node M[1,12] -> platform W[1,52] -> device D[1,365]
 
 ## [包含设备](https://github.com/OS-Q/W27/wiki) 
 
-#### D183：[设备注册查询](https://github.com/OS-Q/D183)
+#### D183：[管控网关](https://github.com/OS-Q/D183)
 
-（登记处）用于注册设备到系统中，该设备维护所有注册设备信息
+设备接入管控网关并传送对应信息
 
-#### D184：[生命周期维护](https://github.com/OS-Q/D184)
+#### D184：[信道监听](https://github.com/OS-Q/D184)
 
-（巡检员）用于查询所有设备状态，测试下辖设备是否正常
+设备不主动连接，通过监听和解析相应数据获得状态
 
-#### D185：[资源关联调度](https://github.com/OS-Q/D185)
+#### D185：[NULL](https://github.com/OS-Q/D185)
 
-（咨询台）用于优化调度资源，启用相关策略
 
-#### D186：[资源缓冲池](https://github.com/OS-Q/D186)
 
-（投递箱）用于缓冲相关需求，等待资源激活后发布
+#### D186：[NULL](https://github.com/OS-Q/D186)
+
+
 
 #### D187：[NULL](https://github.com/OS-Q/D187)
 
@@ -47,30 +49,27 @@
 #### D189：[NULL](https://github.com/OS-Q/D189)
 
 
-## [同级平台](https://github.com/OS-Q/M7/wiki/index) 
+## [同级平台](https://github.com/OS-Q/M7/wiki) 
 
-#### -> W27：[状态管理](https://github.com/OS-Q/W27)
+#### -> W27：[状态管控](https://github.com/OS-Q/W27)
 
-用于监控各个平台的状态信息，维护通信
+用于管理和控制下辖所有的节点设备的生存状态
 
-#### W28：[生成优化](https://github.com/OS-Q/W28)
+#### W28：[身份管控](https://github.com/OS-Q/W28)
 
-用于编译源码，配置相应设备系统参数
+用于管理和控制下辖所有节点的功能和初始配置
 
-#### W29：[异常处理](https://github.com/OS-Q/W29)
+#### W29：[业务管控](https://github.com/OS-Q/W29)
 
-用于处理各个平台节点设备的异常情况
+用于管理和控制下辖所有节点的功能和业务逻辑
 
-#### W30：[交互控制](https://github.com/OS-Q/W30)
+#### W30：[信息管控](https://github.com/OS-Q/W30)
 
-用于发布系统信息，接收用户控制指令
-
+用于管理呈现边缘体系信息，完成和用户间交互
 
 ---
 
-####  qitas@qitas.cn
+####  © qitas@qitas.cn
 ###  [OS-Q redefined Operation System](http://www.OS-Q.com)
-####  © 2018-12-11
-
----
+####  @ 2019-1-14
 
