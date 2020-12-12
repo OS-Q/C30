@@ -1,6 +1,6 @@
 {
-  "name":"toolchain-S18",
-  "description":"Icarus Verilog toolchain",
+  "name":"Compiler-C30",
+  "description":"Icarus Verilog Compiler",
   "url":"https://github.com/FPGAwars/toolchain-iverilog/releases",
   "version": "1.0.0",
   "system": [ "linux_x86_64" ]
